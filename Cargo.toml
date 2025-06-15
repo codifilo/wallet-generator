@@ -1,0 +1,34 @@
+[package]
+name = "wallet-derivator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# For BIP39 mnemonic phrases
+bip39 = "2.0"
+
+# For BIP32 hierarchical key derivation (secp256k1)
+bip32 = "0.5"
+
+# For SLIP-0010 hierarchical key derivation (Ed25519)
+slip10 = "0.4"
+
+# For the secp256k1 elliptic curve used in many cryptocurrencies
+k256 = { version = "0.13", features = ["ecdsa"] }
+
+# For SHA-256 hashing
+sha2 = "0.10"
+
+# For RIPEMD-160 hashing
+ripemd = "0.1"
+
+# For Keccak-256 hashing (Ethereum)
+tiny-keccak = { version = "2.0.2", features = ["keccak"] }
+
+# For Base58Check encoding
+bs58 = { version = "0.5", features = ["check"] }
+
+# For encoding binary data into hexadecimal strings
+hex = "0.4"
